@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Royal Taste Restaurant</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🍽 Royal Taste</div>
+
+<div class="menu-btn" id="menuBtn">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav id="navMenu">
+
+<a href="#home">الرئيسية</a>
+<a href="#categories">المنيو</a>
+<a href="#features">مميزاتنا</a>
+<a href="#gallery">المعرض</a>
+<a href="#booking">الحجز</a>
+<a href="#contact">تواصل</a>
+
+<button id="langToggle" class="translate-btn">
+EN
+</button>
+
+</nav>
+
+</header>
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1
+data-ar="تجربة طعام فاخرة في قلب المدينة"
+data-en="Luxury Dining Experience In The Heart Of The City">
+
+تجربة طعام <span>فاخرة</span> في قلب المدينة
+
+</h1>
+
+<p
+data-ar="استمتع بأشهى الأطباق العالمية والمحلية مع أجواء راقية وخدمة احترافية."
+data-en="Enjoy the finest international and local dishes with luxury atmosphere and professional service.">
+
+استمتع بأشهى الأطباق العالمية والمحلية مع أجواء راقية وخدمة احترافية.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#categories"
+class="btn primary-btn"
+data-ar="استكشف المنيو"
+data-en="Explore Menu">
+استكشف المنيو
+</a>
+
+<a href="#contact"
+class="btn secondary-btn"
+data-ar="احجز الآن"
+data-en="Book Now">
+احجز الآن
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- الأقسام -->
+
+<section id="categories">
+
+<h2 class="section-title">
+
+<span data-ar="أقسام" data-en="Food">
+المنيو
+</span>
+
+
+
+</h2>
+
+<div class="categories-grid">
+
+<div class="category-card hidden" onclick="showCategory('grills')">
+
+<div class="category-icon">
+<i class="fa-solid fa-drumstick-bite"></i>
+</div>
+
+<h3 data-ar="المشويات" data-en="Grills">
+المشويات
+</h3>
+
+<p
+data-ar="ألذ المشويات الطازجة والمتبلة على الفحم."
+data-en="Delicious grilled meals cooked on charcoal.">
+
+ألذ المشويات الطازجة والمتبلة على الفحم.
+
+</p>
+
+</div>
+
+<div class="category-card hidden" onclick="showCategory('drinks')">
+
+<div class="category-icon">
+<i class="fa-solid fa-mug-hot"></i>
+</div>
+
+<h3 data-ar="المشروبات" data-en="Drinks">
+المشروبات
+</h3>
+
+<p
+data-ar="عصائر ومشروبات باردة وساخنة منعشة."
+data-en="Fresh hot and cold drinks with unique taste.">
+
+عصائر ومشروبات باردة وساخنة منعشة.
+
+</p>
+
+</div>
+
+<div class="category-card hidden" onclick="showCategory('appetizers')">
+
+<div class="category-icon">
+<i class="fa-solid fa-bowl-food"></i>
+</div>
+
+<h3 data-ar="المقبلات" data-en="Appetizers">
+المقبلات
+</h3>
+
+<p
+data-ar="مقبلات شهية بطابع شرقي وغربي."
+data-en="Eastern and western delicious appetizers.">
+
+مقبلات شهية بطابع شرقي وغربي.
+
+</p>
+
+</div>
+
+<div class="category-card hidden" onclick="showCategory('desserts')">
+
+<div class="category-icon">
+<i class="fa-solid fa-cake-candles"></i>
+</div>
+
+<h3 data-ar="الحلويات" data-en="Desserts">
+الحلويات
+</h3>
+
+<p
+data-ar="حلويات فاخرة بطعم لا يقاوم."
+data-en="Luxury desserts with unforgettable taste.">
+
+حلويات فاخرة بطعم لا يقاوم.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- الأصناف -->
+
+<section id="category-items">
+
+<h2 class="section-title"
+data-ar="أصناف القسم"
+data-en="Category Items">
+
+أصناف القسم
+
+</h2>
+
+<div class="cards" id="itemsContainer">
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="features" class="hidden">
+
+<h2 class="section-title">
+لماذا <span>نحن؟</span>
+</h2>
+
+<div class="features">
+
+<div class="feature-box">
+<i class="fa-solid fa-utensils"></i>
+<h3>طعام فاخر</h3>
+<p>أفضل المكونات والطهاة المحترفين.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-truck"></i>
+<h3>توصيل سريع</h3>
+<p>خدمة توصيل سريعة وآمنة.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-star"></i>
+<h3>خدمة ممتازة</h3>
+<p>فريق محترف لخدمتك دائماً.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery" class="hidden">
+
+<h2 class="section-title">
+معرض <span>المطعم</span>
+</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</section>
+
+<section id="booking" class="hidden">
+
+<h2 class="section-title">
+احجز <span>طاولتك</span>
+</h2>
+
+<div class="booking">
+
+<form class="booking-form">
+<input type="text" placeholder="الاسم الكامل">
+<input type="tel" placeholder="رقم الهاتف">
+<input type="date">
+<input type="time">
+<textarea rows="5" placeholder="ملاحظات إضافية"></textarea>
+<button class="btn primary-btn">تأكيد الحجز</button>
+</form>
+
+</div>
+
+</section>
+
+<!-- الفوتر -->
+
+<footer id="contact">
+
+<div class="footer-container">
+
+<div class="footer-col">
+
+<h3>Royal Taste</h3>
+
+<p
+data-ar="مطعم فاخر يقدم تجربة طعام استثنائية."
+data-en="Luxury restaurant offering exceptional dining experience.">
+
+مطعم فاخر يقدم تجربة طعام استثنائية.
+
+</p>
+
+<div class="socials">
+
+<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+</div>
+
+</div>
+
+<div class="footer-col">
+
+<h3
+data-ar="تواصل معنا"
+data-en="Contact Us">
+
+تواصل معنا
+
+</h3>
+
+<p>📍 Sudan - Khartoum</p>
+<p>📞 +249 999 999 999</p>
+<p>📧 info@royaltaste.com</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom"
+data-ar="جميع الحقوق محفوظة"
+data-en="All Rights Reserved">
+
+جميع الحقوق محفوظة
+
+</div>
+
+</footer>
+
+<script>
+
+/* القائمة */
+
+const menuBtn=document.getElementById("menuBtn");
+const navMenu=document.getElementById("navMenu");
+
+menuBtn.onclick=()=>{
+navMenu.classList.toggle("active");
+};
+
+/* الترجمة */
+
+const langToggle=document.getElementById("langToggle");
+
+let currentLang="ar";
+
+langToggle.onclick=()=>{
+
+const elements=document.querySelectorAll("[data-ar]");
+
+if(currentLang==="ar"){
+
+document.documentElement.lang="en";
+document.documentElement.dir="ltr";
+
+elements.forEach(el=>{
+el.innerHTML=el.getAttribute("data-en");
+});
+
+langToggle.innerHTML="AR";
+
+currentLang="en";
+
+}else{
+
+document.documentElement.lang="ar";
+document.documentElement.dir="rtl";
+
+elements.forEach(el=>{
+el.innerHTML=el.getAttribute("data-ar");
+});
+
+langToggle.innerHTML="EN";
+
+currentLang="ar";
+
+}
+
+};
+
+/* البيانات */
+
+const categoryData={
+
+grills:[
+
+{
+nameAr:"شيش طاووق",
+nameEn:"Shish Tawook",
+descAr:"دجاج مشوي متبل بطريقة خاصة.",
+descEn:"Special marinated grilled chicken.",
+price:"20$",
+img:"https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"كباب مشوي",
+nameEn:"Grilled Kebab",
+descAr:"لحم مشوي على الفحم.",
+descEn:"Charcoal grilled meat kebab.",
+price:"25$",
+img:"https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"ستيك لحم",
+nameEn:"Beef Steak",
+descAr:"ستيك فاخر مطهو بإتقان.",
+descEn:"Premium perfectly cooked steak.",
+price:"35$",
+img:"https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"دجاج مشوي",
+nameEn:"Grilled Chicken",
+descAr:"دجاج طازج مع بهارات مميزة.",
+descEn:"Fresh grilled chicken with spices.",
+price:"22$",
+img:"https://images.unsplash.com/photo-1518492104633-130d0cc84637?q=80&w=1200&auto=format&fit=crop"
+}
+
+],
+
+drinks:[
+
+{
+nameAr:"عصير برتقال",
+nameEn:"Orange Juice",
+descAr:"عصير طبيعي طازج.",
+descEn:"Fresh natural orange juice.",
+price:"8$",
+img:"https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"ميلك شيك",
+nameEn:"Milkshake",
+descAr:"ميلك شيك كريمي فاخر.",
+descEn:"Luxury creamy milkshake.",
+price:"10$",
+img:"https://images.unsplash.com/photo-1577805947697-89e18249d767?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"قهوة ساخنة",
+nameEn:"Hot Coffee",
+descAr:"قهوة عربية وغربية.",
+descEn:"Arabic and western coffee.",
+price:"6$",
+img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"موهيتو",
+nameEn:"Mojito",
+descAr:"مشروب منعش بالنعناع.",
+descEn:"Refreshing mint mojito.",
+price:"9$",
+img:"https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1200&auto=format&fit=crop"
+}
+
+],
+
+appetizers:[
+
+{
+nameAr:"بطاطس مقلية",
+nameEn:"French Fries",
+descAr:"بطاطس مقرمشة.",
+descEn:"Crispy french fries.",
+price:"7$",
+img:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"سلطة يونانية",
+nameEn:"Greek Salad",
+descAr:"سلطة صحية طازجة.",
+descEn:"Fresh healthy salad.",
+price:"11$",
+img:"https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"شوربة ساخنة",
+nameEn:"Hot Soup",
+descAr:"شوربة غنية بالنكهات.",
+descEn:"Rich flavored soup.",
+price:"9$",
+img:"https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"مقبلات شرقية",
+nameEn:"Eastern Appetizers",
+descAr:"تشكيلة مقبلات شرقية.",
+descEn:"Mix of eastern appetizers.",
+price:"13$",
+img:"https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
+}
+
+],
+
+desserts:[
+
+{
+nameAr:"تشيز كيك",
+nameEn:"Cheesecake",
+descAr:"تشيز كيك كريمي فاخر.",
+descEn:"Luxury creamy cheesecake.",
+price:"12$",
+img:"https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"كرواسون",
+nameEn:"Croissant",
+descAr:"كرواسون فرنسي طازج.",
+descEn:"Fresh french croissant.",
+price:"8$",
+img:"https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"دونات",
+nameEn:"Donuts",
+descAr:"دونات بالشوكولاتة.",
+descEn:"Chocolate donuts.",
+price:"9$",
+img:"https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+nameAr:"آيس كريم",
+nameEn:"Ice Cream",
+descAr:"آيس كريم بنكهات متعددة.",
+descEn:"Ice cream with multiple flavors.",
+price:"7$",
+img:"https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1200&auto=format&fit=crop"
+}
+
+]
+
+};
+
+/* عرض الأصناف */
+
+function showCategory(category){
+
+const container=document.getElementById("itemsContainer");
+
+container.innerHTML="";
+
+categoryData[category].forEach(item=>{
+
+container.innerHTML+=`
+
+<div class="card show">
+
+<img src="${item.img}">
+
+<div class="card-content">
+
+<h3>
+${document.documentElement.lang==="ar"
+? item.nameAr
+: item.nameEn}
+</h3>
+
+<p>
+${document.documentElement.lang==="ar"
+? item.descAr
+: item.descEn}
+</p>
+
+<div class="price">
+${item.price}
+</div>
+
+<a href="#" class="btn primary-btn">
+${document.documentElement.lang==="ar"
+? "اطلب الآن"
+: "Order Now"}
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("category-items")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+/* أنيميشن الظهور */
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+});
+
+document.querySelectorAll(".hidden").forEach((el)=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
